@@ -1,0 +1,26 @@
+# Maven / Gradle build output
+/target/
+/build/
+
+# IDE specific files
+.classpath
+.project
+.settings/
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Spring Boot configuration
+src/main/resources/application.properties
+"application.properties" 

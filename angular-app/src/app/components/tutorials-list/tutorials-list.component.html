@@ -1,0 +1,68 @@
+<div class="container mt-3">
+
+  <!-- Add Button -->
+  <div class="row mb-3 text-end" style="text-align: end;">
+    <div class="col-md-12 text-end">
+      <a routerLink="/tutorials/new/add" class="btn btn-primary">
+        Add
+      </a>
+    </div>
+  </div>
+
+  <h4>Tutorials</h4>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Published</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr
+          *ngFor="let tutorial of tutorials; let i = index"
+          [class.table-active]="i === currentIndex"
+        >
+          <td>{{ i + 1 }}</td>
+          <td>
+            {{ tutorial.title }}
+          </td>
+          <td>{{ tutorial.description }}</td>
+          <td>
+            <span
+              class="badge"
+              [ngClass]="{
+                'bg-success': tutorial.published,
+                'bg-secondary': !tutorial.published
+              }"
+            >
+              {{ tutorial.published ? 'Yes' : 'No' }}
+            </span>
+          </td>
+
+          <!-- Actions -->
+          <td class="text-center">
+            <button
+              class="btn btn-sm btn-warning mr-2"
+              [routerLink]="['/tutorials/edit', tutorial.id]"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-sm btn-danger mr-2"
+              (click)="deleteTutorial(tutorial.id)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
