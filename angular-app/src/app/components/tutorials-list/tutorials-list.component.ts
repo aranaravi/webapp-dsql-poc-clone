@@ -39,16 +39,6 @@ export class TutorialsListComponent {
     this.currentIndex = index;
   }
 
-  removeAllTutorials(): void {
-    this.tutorialService.deleteAll().subscribe({
-      next: (res) => {
-        console.log(res);
-        this.refreshList();
-      },
-      error: (e) => console.error(e)
-    });
-  }
-
   deleteTutorial(id: number): void {
     this.tutorialService.delete(id).subscribe({
       next: (res) => {

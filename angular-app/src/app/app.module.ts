@@ -9,6 +9,8 @@ import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.com
 import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
 import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
 import { CommonModule } from '@angular/common';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,11 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     CommonModule
   ],
-  providers: [],
+  providers: [{ 
+    provide: HTTP_INTERCEPTORS, 
+    useClass: AuthInterceptor, 
+    multi: true 
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

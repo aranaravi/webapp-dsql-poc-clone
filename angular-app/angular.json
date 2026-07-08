@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-16-crud": {
+    "amplify-dsql-poc": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-16-crud",
+            "outputPath": "dist/amplify-dsql-poc",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-16-crud:build:production"
+              "browserTarget": "amplify-dsql-poc:build:production"
             },
             "development": {
-              "browserTarget": "angular-16-crud:build:development"
+              "browserTarget": "amplify-dsql-poc:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-16-crud:build"
+            "browserTarget": "amplify-dsql-poc:build"
           }
         },
         "test": {

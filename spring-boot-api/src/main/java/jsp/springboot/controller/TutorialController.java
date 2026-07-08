@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import jsp.springboot.dto.ServerResponse;
 import jsp.springboot.service.TutorialService;
 
-@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/tutorials")
 public class TutorialController {

@@ -1,18 +1,18 @@
 # Angular 16 example project: CRUD with Rest API
 
-Build an Angular 16 CRUD example App to consume Rest APIs, display, modify & search data.
+Build an Angular Amplify PoC example App to consume Rest APIs, display & modify data.
 
 Tutorial Application in that:
 - Each Tutorial has id, title, description, published status.
 - We can create, retrieve, update, delete Tutorials.
 - There is a Search bar for finding Tutorials by title.
 
-![angular-16-crud-example](angular-16-crud-example.png)
+![amplify-dsql-poc-example](amplify-dsql-poc-example.png)
 
 Run `ng serve --port 8081` for a dev server. Navigate to `http://localhost:8081/`. The app will automatically reload if you change any of the source files.
 
 For instruction, please visit:
-> [Angular 16 CRUD example with Rest API](https://www.bezkoder.com/angular-16-crud-example/)
+> [Angular Amplify PoC example with Rest API](https://www.bezkoder.com/amplify-dsql-poc-example/)
 
 More Practice:
 > [Angular 16 Pagination example](https://www.bezkoder.com/angular-16-pagination-ngx/)
@@ -35,7 +35,7 @@ Fullstack with Node:
 
 Fullstack with Spring Boot:
 
-> [Angular 16 + Spring Boot example](https://www.bezkoder.com/spring-boot-angular-16-crud/)
+> [Angular 16 + Spring Boot example](https://www.bezkoder.com/spring-boot-amplify-dsql-poc/)
 
 > [Angular 16 + Spring Boot + MySQL example](https://www.bezkoder.com/spring-boot-angular-16-mysql/)
 

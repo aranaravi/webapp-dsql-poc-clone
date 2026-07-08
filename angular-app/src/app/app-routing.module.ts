@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
 import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
 import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
-  { path: 'tutorials', component: TutorialsListComponent },
-  { path: 'tutorials/edit/:id', component: TutorialDetailsComponent },
-  { path: 'tutorials/new/add', component: AddTutorialComponent }
+  { path: 'tutorials', component: TutorialsListComponent, canActivate: [AuthGuard] },
+  { path: 'tutorials/edit/:id', component: TutorialDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'tutorials/new/add', component: AddTutorialComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
