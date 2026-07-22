@@ -1,7 +1,7 @@
 import Keycloak from 'keycloak-js';
 
 const keycloak = new (Keycloak as any)({
-  url: 'http://localhost:8080',
+  url: 'https://3.227.9.80',
   realm: 'amplify',
   clientId: 'dsql-poc-client'
 });
