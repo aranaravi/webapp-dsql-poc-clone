@@ -1,6 +1,7 @@
 package jsp.springboot.config;
 
 import org.springframework.stereotype.Component;
+import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.rds.RdsUtilities;
 
@@ -10,6 +11,7 @@ public class IamTokenUtil {
     public String generateToken() {
         RdsUtilities utilities = RdsUtilities.builder()
                 .region(Region.US_EAST_1)
+                .credentialsProvider(DefaultCredentialsProvider.create())
                 .build();
 
         return utilities.generateAuthenticationToken(r -> r
