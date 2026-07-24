@@ -32,7 +32,7 @@ public class DataSourceConfig {
 
         hikari.setDataSource(new PGSimpleDataSource() {
             {
-                setURL("jdbc:postgresql://publicip.dsql.us-east-1.on.aws:5432/postgres?currentSchema=webapp_pocdb&sslmode=require");
+                setURL("jdbc:postgresql://bzt45avdsc6htl334st2krjoee.dsql.us-east-1.on.aws:5432/postgres?currentSchema=webapp_pocdb&sslmode=require");
                 setUser("admin");
             }
 

@@ -13,7 +13,7 @@ public class IamTokenUtil {
                 .build();
 
         return utilities.generateAuthenticationToken(r -> r
-                .hostname("publicip.dsql.us-east-1.on.aws")
+                .hostname("bzt45avdsc6htl334st2krjoee.dsql.us-east-1.on.aws")
                 .port(5432)
                 .username("admin")
         );
