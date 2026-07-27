@@ -9,7 +9,7 @@ import { ApiResponse } from '../interface/apiresponse.interface';
 })
 
 export class TutorialService {
-  private baseUrl = 'https://44.192.57.48/api/tutorials';
+  private baseUrl = 'https://100.51.87.103/api/tutorials';
 
   constructor(private http: HttpClient) {}
 
